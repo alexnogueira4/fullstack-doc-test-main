@@ -15,7 +15,7 @@ export class DocumentService {
     // Try to get from cache first
     const cachedData = await this.cacheService.getCachedDocuments(company);
     if (cachedData) {
-      // return cachedData;
+      return cachedData;
     }
 
     const endDate = new Date().toISOString().split("T")[0];
